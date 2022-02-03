@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Kumbh+Sans:wght@400;700&family=Outfit:wght@100&display=swap");
+* {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --scissorsGradient: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --paperGradient: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --rockGradient: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}

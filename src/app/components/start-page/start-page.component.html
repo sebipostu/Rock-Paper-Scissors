@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="scoreboard_container">
+    <div class="logo_container"></div>
+    <div class="score_container">
+      <h2>SCORE</h2>
+      <span class="score" id="score">{{ count }}</span>
+    </div>
+  </div>
+  <div *ngIf="closeTab == false; else elseBlock" class="main_container">
+    <button
+      class="paper_container"
+      (click)="isActive('paper'); closeTab = true"
+    ></button>
+    <button
+      class="rock_container"
+      (click)="isActive('rock'); closeTab = true"
+    ></button>
+    <button
+      class="scissors_container"
+      (click)="isActive('scissors'); closeTab = true"
+    ></button>
+  </div>
+  <ng-template #elseBlock>
+    <div class="container_fight">
+      <div class="fight_wrapper">
+        <div class="you_wrapper">
+          <h3>YOUR PICK :</h3>
+          <div class="image_wrapper_you" id="userImageChoice">
+            <div class="circle_class_paper" *ngIf="myChoice === 'paper'">
+              <img src="../../../assets/img/icon-paper.svg" alt="" />
+            </div>
+            <div class="circle_class_rock" *ngIf="myChoice === 'rock'">
+              <img src="../../../assets/img/icon-rock.svg" alt="" />
+            </div>
+            <div class="circle_class_scissors" *ngIf="myChoice === 'scissors'">
+              <img src="../../../assets/img/icon-scissors.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="winner_wrapper">
+          <h3>{{ results }}</h3>
+          <button class="btn" (click)="closeTab = false">PLAY AGAIN</button>
+        </div>
+        <div class="computer_wrapper">
+          <h3>COMPUTER PICK:</h3>
+          <div class="image_wrapper_computer">
+            <div class="circle_class_paper" *ngIf="computerChoice === 'paper'">
+              <img src="../../../assets/img/icon-paper.svg" alt="" />
+            </div>
+            <div class="circle_class_rock" *ngIf="computerChoice === 'rock'">
+              <img src="../../../assets/img/icon-rock.svg" alt="" />
+            </div>
+            <div
+              class="circle_class_scissors"
+              *ngIf="computerChoice === 'scissors'"
+            >
+              <img src="../../../assets/img/icon-scissors.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <app-rules-button style="margin-top: 3%; margin-left: 70%"></app-rules-button>
+</div>

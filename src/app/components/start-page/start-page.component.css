@@ -1,0 +1,245 @@
+:root {
+  --scissorsGradient: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --paperGradient: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --rockGradient: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.scoreboard_container {
+  width: 60%;
+  height: 20%;
+  padding: 10px;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  border: 2px solid white;
+  margin-bottom: 30px;
+}
+.logo_container {
+  margin-left: 5%;
+  width: 90%;
+  height: 70%;
+  background: url(./assets/images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.score_container {
+  width: 15%;
+  height: 90%;
+  margin-right: 1.75%;
+  background: white;
+  text-align: center;
+  border-radius: 10px;
+}
+.score_container h2 {
+  font-size: max-content;
+  color: hsl(229, 64%, 46%);
+}
+.score {
+  width: 80%;
+  height: 80%;
+  font-size: 3vmax;
+}
+
+.main_container {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 3%;
+  height: 300px;
+  background: url(./assets/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.paper_container {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(./assets/images/icon-paper.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-color: white;
+  border-color: transparent;
+  color: transparent;
+  position: relative;
+  top: -50px;
+  left: 25px;
+  box-shadow: 0px 0px 0px 20px hsl(230, 89%, 62%);
+  transition: top ease 0.2s;
+}
+.paper_container:hover,
+.scissors_container:hover {
+  top: -60px;
+  cursor: pointer;
+}
+.rock_container {
+  width: 150px;
+  height: 150px;
+  background: url(./assets/images/icon-rock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-color: white;
+  border-radius: 50%;
+  top: 175px;
+  box-shadow: 0px 0px 0px 20px hsl(349, 71%, 52%);
+  border-color: transparent;
+  transition: ease 0.3s;
+  position: relative;
+}
+.rock_container:hover {
+  cursor: pointer;
+  top: 165px;
+  transition: ease 0.3s;
+}
+.scissors_container {
+  width: 150px;
+  height: 150px;
+  background: url(./assets/images/icon-scissors.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-color: white;
+  border-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 20px hsl(39, 89%, 49%);
+  top: -50px;
+  right: 25px;
+  position: relative;
+  transition: top ease 0.2s;
+}
+.rules_container {
+  margin-left: 60%;
+  margin-top: 3%;
+}
+
+.rules_container button {
+  width: 300%;
+  height: 200%;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 1px solid white;
+  background-color: inherit;
+  color: white;
+  cursor: pointer;
+}
+
+.container_fight {
+  width: 750px;
+  height: 300px;
+  background: transparent;
+}
+.fight_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.you_wrapper,
+.computer_wrapper {
+  width: 250px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px auto;
+}
+.winner_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 80%;
+  margin: 10% 0;
+  padding: 0 20px;
+}
+.winner_wrapper h3 {
+  padding-bottom: 20px;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 50px;
+  color: white;
+}
+.image_wrapper_you,
+.image_wrapper_computer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle_class_rock {
+  margin-top: 70px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  box-shadow: 0px 0px 0px 30px hsl(349, 71%, 52%);
+}
+.circle_class_paper {
+  margin-top: 70px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 30px hsl(230, 89%, 62%);
+}
+.circle_class_scissors {
+  margin-top: 70px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  box-shadow: 0px 0px 0px 30px hsl(39, 89%, 49%);
+}
+.btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 15px;
+  border-color: transparent;
+  text-align: center;
+  font-size: 20px;
+  transition-duration: 0.2s;
+}
+.btn:hover {
+  color: hsl(349, 70%, 56%);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+}
+@media screen {
+}
